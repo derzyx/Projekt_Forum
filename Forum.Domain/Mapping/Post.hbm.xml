@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Forum.Domain" assembly="Forum.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Post" table="Post">
+    <id name="Id" column="Id" type="Int32">
+      <generator class="native" />
+    </id>
+
+    <property name="Title" type="String" column="Title" length="50" />
+    <property name="Contents" type="String" column="Contents" length="4000" />
+    <property name="Date" type="datetime" column="Date" />
+
+    <many-to-one name="AuthorId" class="Forum.Domain.User" column="AuthorId" fetch="select" lazy="false" cascade="none" ></many-to-one>
+    
+  </class>
+</hibernate-mapping>

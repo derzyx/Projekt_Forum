@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.Master.cs" Inherits="Forum.Web_pages.StronaGlowna" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="Styles/LayoutMasterStyles.css" rel="stylesheet"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid page-container">
+            <div class="row" style="margin: 0;">
+                <div class="col" style="padding: 0;">
+                    <div id="nav-bar" class="container-fluid nav-bar">
+                        <h2 style="text-align: center">Forum</h2>
+                        <div class="row">
+                            <div id="logo" class="col-3">
+                                <div class="d-flex flex-row justify-content-center">
+                                    <asp:Button ID="btnHomePage" class="btn-primary" runat="server" Text="Strona główna" OnClick="btnHomePage_Click" CausesValidation="false"/>
+                                    <asp:Button ID="btnAddPost" class="btn-primary" runat="server" Text="Dodaj post" OnClick="btnAddPost_Click" CausesValidation="false"/>
+                                </div>
+
+                            </div>
+                            <div class="col-6"></div>
+                            <div id="menu" class="col-3">
+                                <div class="d-flex flex-row justify-content-center">
+                                    <asp:Button ID="btnManageAccount" class="btn-primary" runat="server" Text="Rejestracja" OnClick="btnManageAccount_Click" CausesValidation="false"/>
+                                    <asp:Button ID="btnLogInOut" class="btn-primary" runat="server" Text="Zaloguj" OnClick="btnLogInOut_Click" CausesValidation="False"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin: 0;">
+                <div class="col"></div>
+
+                <div class="col-10">
+
+
+                    
+                    
+                    <div id="content" class="container-fluid content-block">
+                        <asp:ContentPlaceHolder ID="contentBody" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    
+                </div>
+
+                <div class="col"></div>
+            </div>
+            <div id="footer" class="container-fluid footer-bar">
+                2022 Copyright: Michał Krauz
+            </div>
+        </div>
+    </form>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+</body>
+</html>

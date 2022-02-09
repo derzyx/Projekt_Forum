@@ -1,0 +1,46 @@
+﻿body {
+}
+
+.nav-bar{
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+.logo-bar{
+    background-color: aquamarine;
+}
+
+.footer-bar{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    background-color: grey;
+}
+
+.content-block{
+    padding: 50px;
+    margin-bottom: 60px;
+}
+
+.page-container{
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.post-preview {
+    margin: 20px 0 20px 0;
+    padding: 30px;
+    background-color: blanchedalmond;
+}
+
+[type=submit]{
+    margin:0 10px;
+}
+
+[type=submit]:hover {
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Forum.Domain" assembly="Forum.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="User" table="Users">
+    <id name="Id" column="Id" type="Int32">
+      <generator class="native" />
+    </id>
+
+    <property name="Username" type="String" column="Username" length="20" />
+    <property name="Password" type="String" column="Password" length="50" />
+    <property name="AccountDescription" type="String" column="AccountDescription" length="4000" />
+    <property name="Email" type="String" column="Email" length="50" />
+  </class>
+</hibernate-mapping>
